@@ -19,3 +19,7 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build
+      - name: Upload dist
+        uses: actions/upload-artifact@v3
+        with:
+          path: lib
