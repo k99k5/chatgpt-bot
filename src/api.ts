@@ -50,7 +50,7 @@ class ChatGPT {
     const accessToken = await this.refreshAccessToken()
     
     if(!conversationId){
-      message = this.config.initialPrompt + "\n" + message
+      message = "系统信息:" + this.config.initialPrompt + "\n用户信息:" + message
     }
     
     const body: types.ConversationJSONBody = {
