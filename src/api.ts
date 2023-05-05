@@ -193,6 +193,7 @@ namespace ChatGPT {
     proxyAgent?: string
     model: string
     initialPrompt?: string
+    timeout?: number
   }
 
   export const Config: Schema<Config> = Schema.object({
@@ -209,6 +210,7 @@ namespace ChatGPT {
     }),
     proxyAgent: Schema.string().role('link').description('使用的代理服务器地址。'),
     markdown: Schema.boolean().hidden().default(false),
+    timeout: Schema.number().default(60000),
   }).description('登录设置')
 }
 
